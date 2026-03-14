@@ -1,0 +1,176 @@
+/* miniprogram/pages/member/member.wxss */
+.member-container {
+  padding: 30rpx;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40rpx;
+}
+
+.title {
+  font-size: 48rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 15rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+.status-card {
+  background: white;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.status-icon {
+  font-size: 80rpx;
+  margin-right: 30rpx;
+}
+
+.status-info {
+  flex: 1;
+}
+
+.status-text {
+  font-size: 36rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.expiry {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.plans {
+  margin-bottom: 30rpx;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+  border: 3rpx solid transparent;
+  transition: all 0.3s;
+}
+
+.plan-card.selected {
+  border-color: #667eea;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -10rpx;
+  right: 20rpx;
+  background: linear-gradient(135deg, #FFD93D 0%, #FF6B6B 100%);
+  color: white;
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+}
+
+.plan-header {
+  margin-bottom: 20rpx;
+}
+
+.plan-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10rpx;
+}
+
+.current-price {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #667eea;
+  margin-right: 15rpx;
+}
+
+.original-price {
+  font-size: 28rpx;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.duration {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+
+.feature {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.purchase-btn {
+  width: 100%;
+  background: white;
+  color: #667eea;
+  font-size: 36rpx;
+  font-weight: bold;
+  padding: 30rpx;
+  border-radius: 50rpx;
+  border: none;
+}
+
+.benefits {
+  background: white;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-top: 30rpx;
+}
+
+.benefits-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.benefit-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20rpx;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 15rpx;
+}
+
+.benefit-icon {
+  font-size: 40rpx;
+}
+
+.benefit-text {
+  font-size: 26rpx;
+  color: #666;
+}

@@ -1,0 +1,27 @@
+<!-- pages/chat/chat.wxml -->
+<view class="chat-container">
+  <!-- 消息列表 -->
+  <scroll-view class="message-list" scroll-y>
+    <view class="message" wx:for="{{messages}}" wx:key="id">
+      <view class="avatar {{item.role}}">
+        <text wx:if="{{item.role === 'assistant'}}">🤖</text>
+        <text wx:else>👤</text>
+      </view>
+      <view class="message-content {{item.role}}">
+        <text>{{item.content}}</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  
+  <!-- 快捷回复 -->
+  <view class="quick-replies">
+    <text class="quick-reply" wx:for="{{quickReplies}}" wx:key="*this" bindtap="sendQuickReply" data-text="{{item}}">{{item}}</text>
+  </view>
+  
+  <!-- 输入区 -->
+  <view class="input-area">
+    <input class="input" value="{{inputText}}" bindinput="onInputChange" placeholder="输入消息..." />
+    <button class="send-btn" bindtap="onSend">发送</button>
+  </view>
+</view>
