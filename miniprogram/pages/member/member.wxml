@@ -1,0 +1,71 @@
+<!-- miniprogram/pages/member/member.wxml -->
+<view class="member-container">
+  <!-- 头部 -->
+  <view class="header">
+    <text class="title">开通会员</text>
+    <text class="subtitle">解锁全部功能，享受极致体验</text>
+  </view>
+  
+  <!-- 会员状态 -->
+  <view class="status-card" wx:if="{{isMember}}">
+    <view class="status-icon">👑</view>
+    <view class="status-info">
+      <text class="status-text">您已是尊贵会员</text>
+      <text class="expiry">有效期至：{{memberExpiry}}</text>
+    </view>
+  </view>
+  
+  <!-- 套餐选择 -->
+  <view class="plans" wx:if="{{!isMember}}">
+    <view 
+      class="plan-card {{selectedPlan === item.id ? 'selected' : ''}}"
+      wx:for="{{plans}}"
+      wx:key="id"
+      data-plan="{{item.id}}"
+      bindtap="selectPlan"
+    >
+      <view class="popular-badge" wx:if="{{item.popular}}">最受欢迎</view>
+      <view class="plan-header">
+        <text class="plan-name">{{item.name}}</text>
+        <view class="plan-price">
+          <text class="current-price">¥{{item.price}}</text>
+          <text class="original-price">¥{{item.originalPrice}}</text>
+        </view>
+        <text class="duration">{{item.duration}}</text>
+      </view>
+      <view class="features">
+        <text class="feature" wx:for="{{item.features}}" wx:for-item="feature" wx:key="*this">
+          ✓ {{feature}}
+        </text>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 购买按钮 -->
+  <button class="purchase-btn" bindtap="purchase" wx:if="{{!isMember}}">
+    立即开通
+  </button>
+  
+  <!-- 权益说明 -->
+  <view class="benefits">
+    <text class="benefits-title">会员权益</text>
+    <view class="benefit-list">
+      <view class="benefit-item">
+        <text class="benefit-icon">💬</text>
+        <text class="benefit-text">无限对话次数</text>
+      </view>
+      <view class="benefit-item">
+        <text class="benefit-icon">📊</text>
+        <text class="benefit-text">深度情绪分析</text>
+      </view>
+      <view class="benefit-item">
+        <text class="benefit-icon">📅</text>
+        <text class="benefit-text">智能日程管理</text>
+      </view>
+      <view class="benefit-item">
+        <text class="benefit-icon">🎯</text>
+        <text class="benefit-text">专属客服支持</text>
+      </view>
+    </view>
+  </view>
+</view>
