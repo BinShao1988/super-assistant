@@ -1,0 +1,23 @@
+{
+  "name": "超级助理",
+  "version": "1.0.0",
+  "description": "顶级领导助理微信小程序，提供智能对话、日程管理、情绪关怀等功能",
+  "author": "BinShao1988",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BinShao1988/super-assistant"
+  },
+  "keywords": [
+    "wechat-miniprogram",
+    "ai-assistant",
+    "emotion-care",
+    "smart-schedule"
+  ],
+  "scripts": {
+    "deploy": "node scripts/deploy.js",
+    "build": "node scripts/build.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

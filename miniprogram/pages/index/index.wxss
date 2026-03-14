@@ -1,0 +1,94 @@
+/* pages/index/index.wxss */
+.container {
+  padding: 30rpx;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 60rpx 40rpx;
+  border-radius: 20rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.title {
+  font-size: 48rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.card {
+  background: white;
+  padding: 40rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 30rpx;
+}
+
+.card-icon {
+  font-size: 60rpx;
+}
+
+.card-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  display: block;
+}
+
+.card-desc {
+  font-size: 24rpx;
+  color: #666;
+  display: block;
+  margin-top: 10rpx;
+}
+
+.section {
+  background: white;
+  padding: 40rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  display: block;
+}
+
+.overview {
+  display: flex;
+  justify-content: space-around;
+}
+
+.overview-item {
+  text-align: center;
+}
+
+.value {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #667eea;
+  display: block;
+}
+
+.label {
+  font-size: 24rpx;
+  color: #666;
+}
