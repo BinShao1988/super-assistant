@@ -1,0 +1,134 @@
+{
+  "miniprogram": {
+    "appid": "your-appid-here",
+    "version": "1.0.0",
+    "description": "超级助理 - 顶级领导助理小程序"
+  },
+  "cloud": {
+    "env": "super-assistant-env",
+    "functions": [
+      {
+        "name": "ai-chat",
+        "description": "AI智能对话",
+        "memorySize": 256,
+        "timeout": 10
+      },
+      {
+        "name": "payment",
+        "description": "支付系统",
+        "memorySize": 128,
+        "timeout": 5
+      },
+      {
+        "name": "analytics",
+        "description": "数据分析",
+        "memorySize": 128,
+        "timeout": 5
+      }
+    ],
+    "collections": [
+      {
+        "name": "chat_history",
+        "description": "对话历史记录",
+        "permissions": {
+          "read": true,
+          "write": true
+        }
+      },
+      {
+        "name": "members",
+        "description": "会员信息",
+        "permissions": {
+          "read": true,
+          "write": true
+        }
+      },
+      {
+        "name": "orders",
+        "description": "订单记录",
+        "permissions": {
+          "read": true,
+          "write": true
+        }
+      },
+      {
+        "name": "emotion_records",
+        "description": "情绪记录",
+        "permissions": {
+          "read": true,
+          "write": true
+        }
+      },
+      {
+        "name": "schedules",
+        "description": "日程安排",
+        "permissions": {
+          "read": true,
+          "write": true
+        }
+      }
+    ]
+  },
+  "business": {
+    "membership": {
+      "plans": [
+        {
+          "id": "monthly",
+          "name": "月度会员",
+          "price": 19.9,
+          "duration": 30,
+          "features": [
+            "无限对话",
+            "情绪分析",
+            "日程管理",
+            "优先客服"
+          ]
+        },
+        {
+          "id": "yearly",
+          "name": "年度会员",
+          "price": 199,
+          "duration": 365,
+          "features": [
+            "无限对话",
+            "情绪分析",
+            "日程管理",
+            "优先客服",
+            "专属功能"
+          ]
+        },
+        {
+          "id": "lifetime",
+          "name": "终身会员",
+          "price": 499,
+          "duration": 36500,
+          "features": [
+            "所有功能",
+            "永久使用",
+            "VIP特权",
+            "专属客服"
+          ]
+        }
+      ]
+    },
+    "freePlan": {
+      "dailyChats": 10,
+      "features": [
+        "基础对话",
+        "基础情绪分析"
+      ]
+    },
+    "marketing": {
+      "newMemberDiscount": 0.5,
+      "referralBonus": 10,
+      "seasonalPromotions": [
+        {
+          "name": "春节特惠",
+          "discount": 0.8,
+          "startDate": "2026-01-01",
+          "endDate": "2026-02-15"
+        }
+      ]
+    }
+  }
+}
